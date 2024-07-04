@@ -39,8 +39,11 @@ int main()
         }
     }
 
+    // 벡터에 (단어, 빈도수) 쌍 저장
     vector<pair<string, int>> word_list(word_dict.begin(), word_dict.end());
-    stable_sort(word_list.begin(), word_list.end(), compare);
+    
+    // 정렬
+    sort(word_list.begin(), word_list.end(), compare);
 
     for (const auto &pair : word_list)
     {
