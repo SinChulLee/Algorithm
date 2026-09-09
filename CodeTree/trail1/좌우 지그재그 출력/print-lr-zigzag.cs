@@ -1,0 +1,35 @@
+using System;
+
+public class Codetree
+{  
+    public static void Main()
+    {
+        // Please write your code here.
+        int N = int.Parse(Console.ReadLine());
+        int cnt = 0;
+        int ccnt = 0;;
+
+        for(int i = 1; i <= N; i++)
+        {
+            for(int j = 1; j <= N; j++)
+            {
+                if(i % 2 == 1)
+                {
+                    if (cnt <= ccnt)
+                        cnt = N * i - N;
+                    cnt++;   
+                    Console.Write($"{cnt} ");
+                }
+                else
+                {
+                    if (ccnt <= cnt)
+                        ccnt = cnt + N + 1;
+                    ccnt--;
+                    Console.Write($"{ccnt} ");
+                }
+                
+            }
+            Console.WriteLine();
+        }
+    }
+}
