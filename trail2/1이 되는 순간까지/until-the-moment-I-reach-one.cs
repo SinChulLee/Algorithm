@@ -2,18 +2,15 @@ using System;
 
 public class Codetree
 {  
-    public static int cnt;
-
     public static int f(int n)
     {
         if(n == 1)
-            return cnt;
+            return 0;
 
-        cnt++;
         if(n % 2 == 0)
-            return f(n/2);
+            return f(n/2) + 1;
         else
-            return f(n/3);
+            return f(n/3) + 1;
     }
 
     public static void Main()
